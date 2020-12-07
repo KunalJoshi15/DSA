@@ -1,0 +1,17 @@
+THere are few things that need to be considered.
+For finding the complexity of a particular algorithm...
+There are many factors which are responsible... 
+1) The machine in which the program is running.
+2) The language that is being used.
+There will be a certain input for which the one algorithm works slower.
+f(n) is slower
+Lt n-> INF f(n)/g(n) = INF
+Lt n-> INF g(n)/f(n) = 0
+This can be proved by taking two functions with different degree of polynomials.
+
+Friend function and a friend class is used in C++ make the private variables of the class accessible to some other class.
+Operator overloading is a very important concept in C++ this is used to overload the preexisting operator to perform some other task.
+Not all the operators can be overloaded. The one which cannot be overloaded are as follows.
+.,::,? and sizeof
+For implementing the concept of the deep copy we need to have our own copy contructor.
+Forward list is similar to the singly linked list therefore it uses that particular concept only for the usage.
