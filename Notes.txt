@@ -15,3 +15,6 @@ Not all the operators can be overloaded. The one which cannot be overloaded are 
 .,::,? and sizeof
 For implementing the concept of the deep copy we need to have our own copy contructor.
 Forward list is similar to the singly linked list therefore it uses that particular concept only for the usage.
+
+For the min heap with vectors we can use an elegant approach in which we will be changing the sign of the array elements 
+and then we will create the max heap while using it we will multiply the elements by -1
