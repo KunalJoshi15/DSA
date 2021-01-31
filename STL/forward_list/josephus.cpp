@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+
 int getSol(int n,int k)
 {
     list<int> l;

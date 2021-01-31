@@ -19,4 +19,5 @@ int main(){
     return 0;
 // lower bound if the element is not present then it returns the iterator to the next element which is greater than the element if the element we have provided is the greatest then returns the end() iterator.
 // Set is basically implemented in the top of Red Black trees.
+// count is used to give the count of a particular element. erase removes an element from a set or group of elements in the set.
 }

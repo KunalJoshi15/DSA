@@ -1,0 +1,42 @@
+Finding the digits of the number there 
+are two good ways of doing it we can use the division method.
+
+int countDigit(long n)
+{
+    int count=0;
+    while(n>=0)
+    {
+        n=n/10;
+        ++count;
+    }
+    return count;
+}
+Recursive Solution
+int countDigits(long n)
+{
+    if(n==0)
+        return 0;
+    return 1+countDigits(n/10);
+}
+Logarathmic Solution
+int countDigits(long n)
+{
+    return floor(log10(n)+1);
+}
+The complexity in case of the Logarathmic solution is O(1).
+
+There the basic of the mathematics will be used as per our need.
+
+For finding out whether a particular number which is being provided to us is palindrome or not we can use the concept of 
+finding the reversal of the number if that reversed number is equal to the actual number then we can say that the number is palindrome
+while in the second case the number is not palindrome.
+
+For finding the GCD of a particular number we use the naive solution for that particular. We consider all the number which are smaller then the current number 
+if any of the smaller numbers divide the number then we increase the count.
+The first recursive call basically swaps the two numbers from one location to another.
+
+LCM of two numbers
+I/P: a=4,b=6
+OP: 12
+This will be finding the least number which will be divisible by both the numbers.
+1 is a number which is neither prime and nor composite.

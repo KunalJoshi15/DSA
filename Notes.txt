@@ -18,3 +18,8 @@ Forward list is similar to the singly linked list therefore it uses that particu
 
 For the min heap with vectors we can use an elegant approach in which we will be changing the sign of the array elements 
 and then we will create the max heap while using it we will multiply the elements by -1
+
+There are three types of iterators which can be used along with to the erase function we can directly pass the value which is to be erased or we can pass the iterators 
+to the function. (upperbound will return iterator to the upper value otherwise it will return iterator to the lower key)
+
+Map and Set both use the red black tree as an underlying data structure. Map are pairs and they are order in keys.
