@@ -40,3 +40,12 @@ I/P: a=4,b=6
 OP: 12
 This will be finding the least number which will be divisible by both the numbers.
 1 is a number which is neither prime and nor composite.
+
+Check whether the number is prime or not. 
+if(n==2||n==3) return true;
+The number is definitely not prime.
+Otherwise we can directly check.
+if(n%2==0)
+    return 
+
+We can create an algorithm that can help us in fetching the prime numbers.
