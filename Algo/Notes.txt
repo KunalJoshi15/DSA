@@ -49,3 +49,41 @@ if(n%2==0)
     return 
 
 We can create an algorithm that can help us in fetching the prime numbers.
+We can find the factors
+The current method we will write most of the base cases that we have if n==1
+we return a false value;
+n==2 || n==3 return true
+n%2==0||n%3 ==0
+return false;
+Here we are directly omiting all the values which are even and there are many numbers which are the factor of there
+Now implement our own solution in which we run a loop O(root(n)) times and incrementation is done i=i+6;
+if(n%i==0||n%(i+2)==0)
+ returnn false;
+
+We will consider all the prime factors which are within a range.
+The naive solution that comes to the mind for finding the divisors of the particular number is 
+firstly consider all the numbers 
+from i=2 i*i<=n;i++{
+
+}
+if(isPrime(i))
+{
+    int x=i;
+    while(n%x==0)
+    {
+        print x;
+        x=x*i;
+    }
+}
+(Will print all the prime factors which are possible.)
+The better solution to this particular approach would be finding the first prime factor and t
+This solution does not require any extra space. The complexity is root(n)
+
+Seive of erasthanoes is the way for finding whether the number are prime or not.
+This algorithm only keeps the number which are actually prime as true while all the other values are marked as false.
+(Initially all the indices have the values as true)-> after the algorithm does its work. only elements that have 
+We mark the multiples of 2,3,5
+We are considering only the prime factors of the current number.
+
+To find the power in the solution we need an elegant way. Uses the power of recursion
+if the number is 0 then nothing much to be done.
