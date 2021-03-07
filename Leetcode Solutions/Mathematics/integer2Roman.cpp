@@ -20,6 +20,7 @@ public:
         }
         return ans;
         // All the numbers which have a little different representation are represented here so that for those the answer can be determined directly.
+        
     }
 };
 

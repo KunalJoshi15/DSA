@@ -1,0 +1,8 @@
+Recursion provides us an elegant way of solving the problem it basically works with the concept of mathematical induction
+1) Find the base case of the problem.
+2) F(k) is true assume this
+3) Prove F(k+1) is true;
+
+THere is one extended version of it 
+we need to prove f(50) is true we can use 
+f(0) f(1)....f(49) for proving it 

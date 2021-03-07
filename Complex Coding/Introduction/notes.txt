@@ -1,0 +1,27 @@
+Sometimes there are few extra things that are required by us in order to do competitive programming some 
+of the portal asks us to create the input file and an output file for printing the result.
+
+Dynamic 2D array can be created as follows
+int **arr = new int*[n]
+
+for(int i=0;i<n;i++){
+    int arr[i] = new int[n]
+}
+
+THis memory needs to be deleted now therefore this particular method needs to be used.
+for(int i=0;i<n;i++){
+    delete arr[i];
+}
+
+delete[] arr;
+Arrays in this particular case are passed as the pointers.
+
+Pointers data type is basically used to specify what kind of data does the pointer points to
+Declaration and the initialization of a reference variable needs to be done in a single step otherwise it 
+will throw compile time error.
+
+We should never return the reference or the address of a variable that is local to a function as 
+it may cause a dangling pointer problem.
+
+If we want to create an array of a variable size then there we need to store that particular array in the heap memory
+Stack is static allocation while the one in heap is dynamically allocated memory.
