@@ -120,4 +120,33 @@ int count(int n)
 }
 The lookup table is created in an elegant way.
 initial 8 bits and is performed the entry is considered. Then shifting is performed.
-Same process is followed for the next 8 bits and then other two batches of 8 bits.
+Same process is followed for the next 8 bits and then other two batches of 8 bits.'
+
+Recursive program we will mainly focus on in are the direct recursive programs.
+Each recursive program needs to have a base case so that it can terminate.
+
+Recursion is used a lot in many fields of computer science. Both recursive and iterative solutions are 
+equivalent in power.
+Writing recursive code is easy.
+There are many recursive problem.
+
+
+Depth First search has a recursive solution. 
+Tail recursion is the one which is executed faster. In case of the tail recursion the recursive call is at 
+the bottom.
+While in the other recursion the recursion is not tail recursive.
+
+If there is a tail recursion then the changes are easily made by the tail recursive function. They need to do the recursion there is no auxiliary space required in case of the compiler.
+
+We cannot always simply convert the non tail recursive function to a tail recursive function. The best example for this is merge sort 
+There is no non tail recursive function for the merge sort merges after calling the function on the two parts 
+Thats why quick sort is preferred over the merge sort as quick sort does not have this particular overhead.
+
+Inorder and Preorder traversal should be preferred rather than the Postorder traversal as the post order traversal goes through the tail recursion.
+
+We need to find the base case for a particular probelm the base case is the one which cannot be split further.
+The time complexity of the finding palindrome using a recursive solution is O(n) and the space complexity is O(n)
+
+The generating substrings question can be easily solved using the concept of recursion we can consider to include a particular solution or not.
+
+Tower of Hanoi problem is a very basic problem in case of the computer science which uses an elegant recursive solution for solving the particular problem.
