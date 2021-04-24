@@ -150,3 +150,26 @@ The time complexity of the finding palindrome using a recursive solution is O(n)
 The generating substrings question can be easily solved using the concept of recursion we can consider to include a particular solution or not.
 
 Tower of Hanoi problem is a very basic problem in case of the computer science which uses an elegant recursive solution for solving the particular problem.
+
+In case of the josepheus problem the 
+If there is only one person then that particular person is the only person which will be alive at last.
+now the problem has been reduced
+(jos(n-1,k)+k)%n This will be solving the problem.
+
+In case of the towerofhanoi problem.
+if(N==1)
+{
+    If there is only one disc present then simply move that particular disk from top to some other location.
+    cout<<"move disk 1 from rod"<<"to rod"<<to<<endl;
+    return 1;
+}
+
+int step1=toh(N-1,from,aux,to);
+cout<<"move disk "<<N<<" from rod "<<from<<" to rod"<<to<<endl;
+step2=toh(N-1,aux,from,to);
+
+In case of the josephus problem we create the solution to the problem that we currently have.
+find the possible series in case of the josephus problem.
+
+In the present josepheus circle problem the counting here in this particular case starts form 1. The first person that is present is numbered as 1.
+Create a circle and make the equations according to it.

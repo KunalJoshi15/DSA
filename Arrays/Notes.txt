@@ -1,0 +1,61 @@
+Arrays are used so that the code becomes more manageable therefore due to it. We will simply create one array 
+and in that array elements are stored. In array the elements are stored.
+In array all the elements are stored in contiguous manner. This means that the address of the elements present are 
+one after the other element.
+There are few advantages of these contiguous memory allocation. This means that the elements are present one after
+the other.
+Random access and cache friendliness is present in this particular case.
+the ith item is found in O(1) time. Arrays store the address of the first element.
+
+The cache maintains the locality of reference.
+
+Prefetching does not work with tree and linked list as they don't have the random access.
+
+Arrays on the basis of size are of two types:
+Fixed Sized Arrays 
+Dynamic Sized Arrays
+
+ex-> int arr[int]; <Stack Allocated>
+int *arr = new int[n] <Heap Allocatated array>
+the above array  is created in the heap.
+int arr[] = {10,24,12,13}; <Stack Allocated>
+Language specific.
+
+The arrays in java are always created on.
+in case of the Dynamic Sized arrays we can add as many ekenebts as we want.
+vector on the underlying structure uses the arrays itself.
+Let us say that currently the size of the array is 20
+if 21 element is inserted then array size is doubled.
+
+vectors in C++. There are many functions
+
+There are many operations which are present on the arrays,
+I/P arr[] = {20,5,7,25}
+
+There are many operations which are present in the arrays itself.
+Searching is one such operation.
+We take the array and the size of the array. We consider each and every element and then we will be finding whether the particular item is present or not.
+<Binary search and linear search is possible.>
+
+We want to insert an element at position2.
+Implementation can be performed as per the current operation
+all the elements which are ahead of the position are moved one position ahead of the current position.
+
+We need to remove the duplicates from the array.
+We have the distinct elements at the different space using it we can remove the duplicates as per our own need.
+
+There are four spaces and according to those spaces the array is considered.
+<Basically moves all the distrinct elements to the starting of the array and places then in the specified location.>
+
+O(n) Time 
+O(n) space
+In this particular approach we create a temporary array of the same size and in that array elements which are distinct are stored.
+
+First element is always copeid.
+we check whether the element that is to be copied is already present in the array or not.
+If the particular element is already copied then that particular element is ignored.
+
+arr[] = {10,20,20,30,30,30}
+temp[] = {10,20,-,-,-,-}
+after copying a particular value inside the array the element which is copied 
+Copy elements to the orignal array.

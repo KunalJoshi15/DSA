@@ -1,0 +1,33 @@
+The basic complexity analysis is used for finding which algorithm is the most suitable algorithm for us.
+On the basis of the input function will be plotting the graph. <This defines how our time will change if the size of the input is increased.>
+getTimeInMicroSeconds()-> This gives the current time. 
+<We can find the number of inputs that are required in the input.>
+
+This complexity based approach provides us a way to determine many processes are currently running in the computer.
+Test case generation: What is the test case in the generation.
+Insertion sort is very fast. It is input specific. We mostly finds the worst case.
+Linear Search is the algorithm to find the particular element in an array. O(n) if not in array present then we can simply 
+say that we will be performing the n comparisons.
+Insertion Sort: Basically sort the array as per our own need. We will consider the current element and we will place it in its correct position
+This obeys the rule of the loop invariant.
+
+In the worst case of the insertion sort we will simply perform the comparison and swap at each and every level.
+
+Selection sort works in this particular way. It finds the minimum element from the array and then places that min element 
+to the starting location. then this same is done for the remaning elements.
+
+In case of the recursive solutions we need to create a recurrence relation and using that particular recurrence relation we find the complexity of the algorithm.
+The recurrence realtion that will be created for the merge sort is as follows.
+T(n)=2T(n/2)+O(n)
+solving this will give us the time complexity of O(n log n)
+The time complexity for the fibonacci series is O(2^n).
+
+Space Complexity: All the additional space that is provided to the algorithm is said the space complexity of the algorithm.
+
+If for a particular sorting algorithm we need some extra array then we simply say that time space complexity of the algorithm is more.
+In case of the bubble sort there isn't any extra space required and due to it we can space that the particular algorithm has the O(1) as the space complexity.
+In case of the recursive function there is always some extra space which is required for the recursive stack.
+
+O(n) is the extra space which is required for the implementation of the merge sort.
+Space complexity for the fibonacci program is O(n) as these many levels are required for the recursion stack.
+There is a basic implementation that is required in case of the maximum contiguous subarray.
