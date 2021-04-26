@@ -51,7 +51,7 @@ O(n) Time
 O(n) space
 In this particular approach we create a temporary array of the same size and in that array elements which are distinct are stored.
 
-First element is always copeid.
+First element is always copied.
 we check whether the element that is to be copied is already present in the array or not.
 If the particular element is already copied then that particular element is ignored.
 
@@ -59,3 +59,8 @@ arr[] = {10,20,20,30,30,30}
 temp[] = {10,20,-,-,-,-}
 after copying a particular value inside the array the element which is copied 
 Copy elements to the orignal array.
+
+Extra information need not be passed in case of the java program. like the length of the array as it can be cacluated using the length function in java.
+In case of the sorted array we need to find the frequency of the elements present in it.
+
+x is the length of the thinner candle and 2x is thinner candle.
