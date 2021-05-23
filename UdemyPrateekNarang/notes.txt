@@ -1,0 +1,11 @@
+Majority of problems. Doing the questions
+
+int a[100];
+int a[100] = {0}; -> Will create an array and initialize the elements of the arrays as 0.
+vector is used a lot in programming concepts.
+
+Vectors are sequence containers representing arrays that can change in size.
+Vectors also has the contiguous memory allocations. O(1).
+Vectors can be used to create dynamic 1D & 2D arrays.
+We will be using vectors throughout the course in place of regular array.
+Arrays are pass by value.

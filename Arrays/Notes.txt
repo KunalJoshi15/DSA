@@ -63,4 +63,10 @@ Copy elements to the orignal array.
 Extra information need not be passed in case of the java program. like the length of the array as it can be cacluated using the length function in java.
 In case of the sorted array we need to find the frequency of the elements present in it.
 
-x is the length of the thinner candle and 2x is thinner candle.
+l/6 and l/4-> thinner
+
+not length is x and thicker is 2x
+l-x/
+
+A particular element is called the majority element if the particular element which appears more than n/2 times.
+We can print any of the indexes of the majority element.
