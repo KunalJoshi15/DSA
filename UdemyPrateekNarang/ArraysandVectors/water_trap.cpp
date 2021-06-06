@@ -3,7 +3,7 @@
 using namespace std;
 //Consider the corner cases before only.
 int trappedWater(vector<int> heights){
-    int n=height.size();
+    int n=heights.size();
     if(n<=2) return 0;
     //Left Max;
     vector<int> left(n,0),right(n,0);
@@ -21,6 +21,13 @@ int trappedWater(vector<int> heights){
         water+=min(left[i],right[i])-heights[i];
     return water;
 }
+/*
+BRUTE FORCE
+In the extreme bars the water cannot be trapped. Therefore the place wherer the water can be trapped is the middle bars.
+consider each of the middle bar and find the maximum height left and max bar lengeth at right to it.
+This will be computed for all the bars that we go through.
+ O(n^2) will be the worst case time complexity of this particular problem. 
+*/
 
 int main(){
     // Between the bars there are some of the empty spaces there we can store the rainwater.
