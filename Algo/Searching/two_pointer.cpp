@@ -5,8 +5,9 @@ using namespace std;
 int two_pointer(int arr[],int n){
     // The hashing is used in O(1) time therefore we can use the hashmap in that case.
     // O(n) is used -> When the array is not sorted extra space is used for maintaining the hash map of the elements if not then we can simply use the two pointer appraoch.
-
+    // The two pointers approach is useful when the elements are in the sorted order it reduces the time complexity to a huge extent
     // We consider two pointers one from the left side while the other one from the right side of the array.
+    
 }
 
 int main()

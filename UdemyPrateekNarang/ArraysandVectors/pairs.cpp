@@ -9,6 +9,7 @@ vector<int> best(int arr[],int n,int Sum)
     vector<int> result;
 
     for(int i=0;i<n;i++){
+        // WE will be checking whether the complement of the particular value is present or not.
         int x = Sum - arr[i];
         if(s.find(x)!=s.end()){
             result.push_back(x);

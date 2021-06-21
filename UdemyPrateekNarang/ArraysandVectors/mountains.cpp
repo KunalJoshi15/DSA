@@ -12,12 +12,14 @@ int highest_mountain(vector<int> arr){
             int cnt=1;
             int j=i;
             //count backwards
-             while(j>=1 and arr[j]>arr[j-1]){
+             while(j>=1 and arr[j]>arr[j-1]){// check all the ones which are smaller. Count the values which are in that case.
+             //The last element cannot be the largest element.
                  j--;
                  cnt++;
              }           
             //count forwards.
             while(i<=n-2 and arr[i]>arr[i+1]){
+                // Increment the larger values and count the values which are present in the mountain.
                 i++;
                 cnt++;
             }

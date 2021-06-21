@@ -1,0 +1,7 @@
+This takes a very ingenous solution for solving a particular problem that we are encountering as per our own requirement.
+
+We are asked to find the median of the two sorted arrays 
+1 2 3 4 5 6
+8 9 10 12 19 30
+
+The solution will leverage the concept of the binary search as per our need. We will be performing the binary search in the smaller sized array.

@@ -20,10 +20,10 @@ int countMinSwaps(vector<int> arr){
     int ans;
     for(int i=0;i<n;i++){
         // If the element is already visited or we are visiting it for the first time.
-            int old_position = ap[i].second;
-            if(visited[i]==true or old_position==i){
-                continue;
-            }
+        int old_position = ap[i].second;
+        if(visited[i]==true or old_position==i){
+            continue;
+        }
         // Visiting the element index for the first time
         // The node variable represents the current index that is being visited.
         int node = i;
@@ -34,10 +34,13 @@ int countMinSwaps(vector<int> arr){
             // Sorting is performed on the basis of the indices.
             // All the elements which are a part of the loop are considered together.
             visited[node] = true;
+            // This next node is the second index.
             int next_node = ap[node].second;
             node = next_node;
             cycle +=1;
+            // Find the length of the cycle.
         }
+        // Add the information into the answer. All the cycles will be considered. Whichever answer we get if the last answer.
         ans += (cycle-1);
     }
     return ans;
