@@ -22,7 +22,7 @@ int partition(vector<int> arr,int s,int e){
 // k is the position kth smallest element.
 int quickselect(vector<int> arr,int s,int e,int k)
 {
-	int p = partition(a,s,e);
+	int p = partition(arr,s,e);
 	if(p==k) return arr[p];
 	else if(k<p){
 		return quickselect(arr,s,p-1,k);
@@ -36,7 +36,7 @@ int main(){
 	vector<int> arr{10,5,2,0,7,6,4};
 	cout<<arr.size()<<endl;
 	int n = arr.size();
-	k=3;
+	int k=3;
 	int index = quickselect(arr,0,n-1,k);
 	cout<<index;
 }

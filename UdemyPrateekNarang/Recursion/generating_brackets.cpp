@@ -9,7 +9,7 @@ void generateBrackets(int n,int open,int close,string output){
 	}
 	if(open<n){
 		// Here the mistake that poeple might make is output += "("
-		generateBrakcets(n,open+1,close,output+"(");
+		generateBrackets(n,open+1,close,output+"(");
 		// If output is specified in the different position then we will simply have to pop it. output.pop_back()
 	}
 	if(close<open){

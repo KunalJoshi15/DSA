@@ -9,3 +9,9 @@ Vectors also has the contiguous memory allocations. O(1).
 Vectors can be used to create dynamic 1D & 2D arrays.
 We will be using vectors throughout the course in place of regular array.
 Arrays are pass by value.
+
+Height Balanced tree.
+A non empty binary tree is balanced if.
+1) Left subtree T is balanced.
+2) Right subtree of T is balanced.
+3) The difference between heights of the left subtree and right subtree is not more than 1.

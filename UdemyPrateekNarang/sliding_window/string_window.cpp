@@ -49,7 +49,7 @@ string stringWindow(string s1,string s2){
     if(start_idx==-1) {
         return "No window found";
     }
-    return s.substr(start_idx,min_so_far);
+    return s1.substr(start_idx,min_so_far);
 }
 
 int main()
