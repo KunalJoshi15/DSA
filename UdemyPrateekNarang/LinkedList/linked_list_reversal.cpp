@@ -17,6 +17,7 @@ node *recReverse(node *head){
         return head;
     }
 
+    // Here the hypothesis is the linkedlist witll be reversed entirely.
     node *sHead = recReverse(head->next);
     head->next->next = head;
     head->next = NULL;

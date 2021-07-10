@@ -19,7 +19,7 @@
     // prefix sum.
     // Find the prefix sum of the entire array which is now obtained.
     int msum = arr[0],ind;
-    for (int i = 1; i < maxi+1; i++) {
+    for(int i = 1; i < maxi+1; i++) {
         arr[i] += arr[i - 1];
         if (msum < arr[i]) {
             msum = arr[i];

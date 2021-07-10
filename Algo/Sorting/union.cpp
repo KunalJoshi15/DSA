@@ -6,7 +6,7 @@ int main()
 {
 	int a1[] = {1,4,5,6,7,8};
 	int a2[] = {4,7,8,9,10};
-
+	vector<int> solution;
 	int n1=6;
 	int n2=5;
 	int i=0,j=0;

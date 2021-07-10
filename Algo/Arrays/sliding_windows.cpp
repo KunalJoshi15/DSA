@@ -11,7 +11,7 @@ The naive approach to solve this particular problem will be to consider k elemen
 
 */
 
-int naive_sliding(int arr[],int n){
+int naive_sliding(int arr[],int n,int k){
     int max_sum = INT_MIN;
     for(int i=0;i+k-1<n;i++){
         int sum=0;
@@ -35,8 +35,13 @@ int linearSliding(int arr[],int n,int k){
     max_sum=max(sum,max_sum);
     for(int i=k;i<n;i++){
         sum = sum+arr[i]-arr[i-k];
-        max_sum=max(sum,max_sum)
+        max_sum=max(sum,max_sum);
     }
     return max_sum;
     //This particular solution which we have implemented is a linear time solution to the problem.
+}
+
+int main()
+{
+    return 0;
 }

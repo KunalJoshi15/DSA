@@ -12,8 +12,8 @@ int sum(int *arr,int b,int e){
 	}
 	return s;
 }
-
-int minPages(int *arr,int k){
+// Here k represents the number of students and n is the number of books.
+int minPages(int *arr,int k,int n){
 	if(k==1) return sum(arr,0,n-1);
 	if(n==1) return arr[0];
 	int res = INT_MAX;
@@ -44,12 +44,12 @@ bool feasibleSolution(int *arr,int n,int k,int mid){
 	return (req<=k);
 }
 
-int efficientMinPages(int *arr,int k){
+int efficientMinPages(int *arr,int k,int n){
 	// In the effiecient approach to this particular problem we will be finding the range which could be possible. 
 	// The range will always be around the max book size and the sum of all the pages. We can perform the binary search within this particular range.
 	int sum = 0;
 	int maximum=INT_MIN;
-
+	int res=0;
 	for(int i=0;i<n;i++){
 		sum += arr[i];
 		maximum = max(maximum,arr[i]);
@@ -74,5 +74,5 @@ int efficientMinPages(int *arr,int k){
 int main(){
 	int arr[] = {10,20,30,40};
 	int k = 3;
-	int min = minPages(arr,k);	
+	int min = minPages(arr,k,sizeof(arr)/sizeof(int));	
 }
