@@ -173,3 +173,5 @@ find the possible series in case of the josephus problem.
 
 In the present josepheus circle problem the counting here in this particular case starts form 1. The first person that is present is numbered as 1.
 Create a circle and make the equations according to it.
+
+Initially for the concept of the strings. Only english characters were allowed but due to the existence of UTF-16 we can support the characters from multiple languages as per our requirement.
