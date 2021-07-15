@@ -1,9 +1,11 @@
 #include<bits/stdc++.h>
 
 using namespace std;
-bool comp(int a,int b){
-    return a<b;
-}
+class comp{
+    bool operator()(int &a,int &b){
+        return a<b;
+    }
+};
 
 int mergingRopes(int arr[],int n){
     priority_queue<int,vector<int>,comp> h(arr,arr+n);
