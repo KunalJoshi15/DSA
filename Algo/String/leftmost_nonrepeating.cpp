@@ -7,12 +7,14 @@ int nonRep(string &str){
 	int fI[char];
 	fill(fI,fI+CHAR,-1);
 	// Here we are initializing all the values which are present in the map as per our requirement.
-
+	// The initial pass takes the time complexity equivalent to the current case.
+	// iF the particular element is found and to its index the value of -1 is stored then we make the changes accordingly.
 	for(int i=0;i<str.length();i++){
 		if(fI[str[i]]==-1){
 			fI[str[i]]=i;
 		}
 		else{
+			// OTHERWISE THE NUMBER IS REPEATING THEREFORE CHANGE THE VALLUE TO SOME OTHER VALUE.
 			fI[str[i]]=-2;
 		}
 	}
