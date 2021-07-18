@@ -57,6 +57,7 @@ int longestDistinct(string str){
 	int n = str.length();
 	int res=0;
 	int i=0;
+	// This is an elegant approach to do its questions.
 	// All the values which are present in the vector are initialized to -1.
 	vector<int> prev(256,-1);
 	for(int j=0;j<n;j++){
