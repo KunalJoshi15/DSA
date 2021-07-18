@@ -30,6 +30,7 @@ int efficientSub(int arr[],int n){
     int curr=1;
     int res=1;
     for(int i=0;i<n;i++){
+        // This is very elegant way for using the approach.
         int ele = arr[i];
         if(s.find(ele-1)!=s.end()){
             continue;
