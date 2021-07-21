@@ -175,3 +175,12 @@ In the present josepheus circle problem the counting here in this particular cas
 Create a circle and make the equations according to it.
 
 Initially for the concept of the strings. Only english characters were allowed but due to the existence of UTF-16 we can support the characters from multiple languages as per our requirement.
+
+The problems which are associated with the array data structure is that size of the array data structure needs to be predefined.
+Insertion to the middle position in case of the array is costly. As we even have to move the elements by one place when we insert a particular value.
+
+
+In case of the linked list there is no pre allocation of the nodes. We can dynamically create as many nodes as we want.
+There is always a head node in case of the linked list that contains the address of the first element.
+
+Insertion to the starting location takes the constant amount of time.
