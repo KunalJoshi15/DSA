@@ -5,6 +5,7 @@ using namespace std;
 In case of the Breadth first search we traverse the nodes which are adjacent to the current node. 
 BFS basically uses the idea of queue in order to traverse.
 BFS algorithm can be used for finding the shortest path from one node to other nodes.
+
 */
 
 class Graph{
@@ -54,6 +55,6 @@ int main()
 	g.addEdge(3,1,true);
 	g.addEdge(4,2,true);
 	g.addEdge(0,3);
-
+	
 	g.bfs(3);
 }
