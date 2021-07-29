@@ -37,10 +37,11 @@ Node *recReversal(Node *head)
 	return smallHead;
 }
 // In this algo we ask the recursion to reverse the initial n-1 nodes and then reverse the link of the current node ourself.
+// This particular approach is similar to the iterative approach we have the current node and the next node.
 Node *recReversal1(Node *curr,Node *prev){
 	if(curr==NULL) return prev;
 
-
+	// NEXT NODE WILL BE SAVED since it needs to be passed.
 	Node *next = curr->next;
 	curr->next = prev;
 	return recReversal1(next,curr);
