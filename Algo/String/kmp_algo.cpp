@@ -5,6 +5,7 @@ using namespace std;
 // this function will simply create the lps array and then the other part of the code can be performed then.
 void lps(vector<int> &lps,string s)
 {
+	// a single character is always a string. 
 	int i=1;
 	int n = s.size();
 	int j=0;
