@@ -92,6 +92,7 @@ int intersectionRec(Node *head1,Node *head2){
 }
 // Similarly we can form the iterative solution to this particular problem as per our requirement.
 
+
 void printLL(Node *head){
 	if(head==NULL) return;
 	cout<<head->data<<"-->";
