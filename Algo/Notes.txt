@@ -184,3 +184,4 @@ In case of the linked list there is no pre allocation of the nodes. We can dynam
 There is always a head node in case of the linked list that contains the address of the first element.
 
 Insertion to the starting location takes the constant amount of time.
+
