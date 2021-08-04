@@ -56,7 +56,7 @@ node *mergeSort(node *head){
 
 int main()
 {
-
+    
 }
 /*
 Finding the midpoint in case of the linked list will take more time but still the overall time complexity of the algorithm is not altered.

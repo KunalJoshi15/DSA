@@ -1,5 +1,4 @@
-#include<vector>
-#include<set>
+#include<bits/stdc++.h>
 using namespace std;
 
 class Node{
@@ -18,11 +17,13 @@ public:
 
 class Compare{
     // TELLS WHICH WILL COME FIRST AND SECOND.
+public:
     bool operator()(const Node &a,const Node &b){
         return a.dist<=b.dist;
     }
 };
 
+// Here even the set of vectors can be used and then define a comparator to work with it.
 int shortest_path(vector<vector<int> > grid){
     //return the shortest path len
     int m = grid.size();
@@ -30,11 +31,11 @@ int shortest_path(vector<vector<int> > grid){
 
     int i=0,j=0;
 
-    vector<vector<int>> dist(m+1,INT_MAX);
+    vector<vector<int>> dist(m+1,vector<int>(n+1,INT_MAX));
 
-    // We can move to these 4 directions
-    int dx = {0,0,1,-1};
-    int dy = {1,-1,0,0};
+    // We can move to these 4 directions In case of the 8 way dfs the approach is different.
+    int dx[] = {0,0,1,-1};
+    int dy[] = {1,-1,0,0};
     
     dist[i][j] = grid[0][0];
     // HEre we will be creating a set of 
@@ -68,4 +69,16 @@ int shortest_path(vector<vector<int> > grid){
         }   
     }
     return dist[m-1][n-1];
+}
+
+int main()
+{
+    vector<vector<int>> grid = {
+        {31,100,65,12,18},
+        {10,13,47,157,6},
+        {100,113,174,11,33},
+        {88,124,41,20,140},
+        {99,32,111,41,20}
+    };
+    cout<<shortest_path(grid);
 }
