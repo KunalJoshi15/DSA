@@ -15,3 +15,10 @@ A non empty binary tree is balanced if.
 1) Left subtree T is balanced.
 2) Right subtree of T is balanced.
 3) The difference between heights of the left subtree and right subtree is not more than 1.
+
+Dynamic programming is all about learn from the past. We save the answer that we currently have and then if same answer is required for computation again then we can use our lookup table where the answer is stored.
+
+Dynamic Programming leverages the idea of the recurrence relation with overlapping sub problems.
+
+The concept in which we can combine the smaller sub problems in order to find the solution to the larger sub problem.
+We cannot apply dynamic programming to the binary search problem. as the problems in which the current problem is dividing into are not overlapping.

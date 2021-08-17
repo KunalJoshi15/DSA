@@ -185,3 +185,16 @@ There is always a head node in case of the linked list that contains the address
 
 Insertion to the starting location takes the constant amount of time.
 
+The stacks which are being used in the code walkthrough. we simply consider it as the books one above the other.
+LIFO is the strategy which it follows. Pop also happens form the same location only.
+
+There are two corner conditions which happens on the stack. These are mainly overflow and the underflow. Overflow happens when there is no space to insert the elements in the stack while the underflow occurs when we cannot delete the items form the stack.
+
+Stack can be either implemented using the array or the linkedlist.
+Applications of the stack:
+1) In case of the function calling in the programming language stack is used.
+2) Checking for balanced parenthesis.
+3) Reversing items.
+4) Infix to postfix.
+5) Evaluation of prefix and postfix.
+6) Stock span problem (V V V important)
