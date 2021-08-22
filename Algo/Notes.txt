@@ -198,3 +198,13 @@ Applications of the stack:
 4) Infix to postfix.
 5) Evaluation of prefix and postfix.
 6) Stock span problem (V V V important)
+
+There are three notations which are commonly used in case of the stack evaluation. These notations are as follows.
+Infix-> the operator in this particular case is present in between. x+y
+Postfix-> operator is last  xy+
+Prefix-> operator is first. +xy
+
+first of all the precendence is checked for the operators in case of the evaluation of the infix expression. if same precedence then we check for the associativity.
+
+In case of the infix notations we require the precedence and the associativity rules.
+In case of the infix expression we require the precedence and the associativity of the operators while in case of the postfix and the prefix expressions we don't require those.

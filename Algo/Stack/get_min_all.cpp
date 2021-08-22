@@ -36,7 +36,9 @@ int push(int x){
 		min = t;
 		s.push(x);
 	}
-	else if(x<=min){
+	else if(x<=min){ 
+		// Here if the element which is being pushed is smaller then the min then the element which will be pushed is. 2*x-min
+		// min element will also be changed.
 		s.push(2*x-min);
 		min = x;
 	}
