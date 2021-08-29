@@ -208,3 +208,28 @@ first of all the precendence is checked for the operators in case of the evaluat
 
 In case of the infix notations we require the precedence and the associativity rules.
 In case of the infix expression we require the precedence and the associativity of the operators while in case of the postfix and the prefix expressions we don't require those.
+
+Here the time complexity of the maximum element in k size window is O(n).
+
+The tree data structure is used in when we want to show the heirarchy.
+
+Tree is a non linear data structure which stores the information in a particular order.
+
+Nodes which are just below the current node are called the children of the current node.
+
+There are many trees which are below the current tree. These trees are called the subtree of the current tree.
+
+Application of tree data structures:
+1) USED FOR REPRESENTATION OF THE HEIRARCHICAL DATAS.
+-> ORGANIZATIONAL INFORMATION CAN BE REPRESENTED USING THE TREE DATA STRUCTURE.
+-> FOLDER STRUCTURE.
+-> XML/HTML content.
+-> In OOP (Inheritence.)
+2) Binary Search tree.
+3) Binary Heaps.
+4) B and B+ trees.
+5) in networking.
+6) Parse tree.
+tries suffix trees binary index tree, segment trees.
+
+binary trees are used a lot therefore we sturt trees. Uninitialized members of the class are always null in java.
