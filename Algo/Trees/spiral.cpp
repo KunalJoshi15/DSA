@@ -14,6 +14,11 @@ public:
 		right = NULL;
 	}
 };
+/*
+There are two ways which are being used in order to print the tree in the spiral form.
+1) We will be using an stack and a queue.
+After each iteration we will negate the reverse variable. (In order to identify when to directly print the items and when to push those onto the stack.)
+*/
 void printSpiral(Node *root){
 	if(root==NULL) return;
 	queue<Node*> q;
@@ -46,6 +51,43 @@ void printSpiral(Node *root){
 			reverse=!reverse;
 	}
 }
+// here we will be using two stacks. In each of the stack the items are pushed in current order and the reverese order in the alternate levels.
+// Here we will push the initial node into the stack s1.
+// Then until the stack s1 is not empty we will be pushing their children in right to left order. As we need to print them in right to left order.
+
+void printSpiral1(Node *root){
+	if(root==NULL) return
+	stack<Node*> s1;
+	stack<Node*> s2;
+	s1.push(root->key);
+	while(s1.empty()==false || s2.empty()==false){
+		while(s1.empty()==false){
+			Node *temp = s1.top();
+			s1.pop();
+			cout<<temp->key<<" ";
+
+			if(temp->right){
+				s2.push(temp->right);
+			}
+			if(temp->left){
+				s2.push(temp->left);
+			}
+		}
+		while(s2.empty()==false){
+			Node *temp = s2.top();
+			s2.pop();
+
+			cout<<temp->key<<" ";
+			if(temp->left){
+				s1.push(temp->left);
+			}
+			if(temp->right){
+				s1.push(temp->right);
+			}
+		}
+	}
+}
+
 
 int main()
 {
