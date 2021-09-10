@@ -233,3 +233,8 @@ Application of tree data structures:
 tries suffix trees binary index tree, segment trees.
 
 binary trees are used a lot therefore we sturt trees. Uninitialized members of the class are always null in java.
+
+In case of the binary search tree implementation it basically leverages the idea of the binary search. left node is smaller node then
+
+If the node that is to be deleted is the leaf node then we can simply delete it.
+Concept of the inorder succesor and inorder predecessor is used.
