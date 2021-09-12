@@ -237,4 +237,43 @@ binary trees are used a lot therefore we sturt trees. Uninitialized members of t
 In case of the binary search tree implementation it basically leverages the idea of the binary search. left node is smaller node then
 
 If the node that is to be deleted is the leaf node then we can simply delete it.
-Concept of the inorder succesor and inorder predecessor is used.
+Concept of the inorder succesor and inorder predecessor is used when we want to delete a particular node from a binary search tree. This will be used when there are two children of a particular node.
+
+The same nodes if are inserted in some other order will generate a different height while in the other case it will geenrate the different height.
+
+In case of the self balancing binary search trees the order of the insertion of the elements matter. If the elements are inserted in wrong order in the binary search tree then we can simply say that the binary search tree can be skewed. The balanced binary search tree maintains the height of the binary search tree to almost log n.
+
+The extra task of the restructuring of the tree is done while inserting and deletion of the elements.
+
+In case of the avl tree we consider the left height and the right subtree height of each internal node if the absolute difference between those is >1 then we say that the binary search tree is not balanced.
+
+There are four type of the anomaly which can occur 
+1) Left Left.
+2) Right Right
+3) Left Right
+4) Right Left
+
+In case of the left left or right right anomaly we rotate the tree using the center node to anticlockwise or clockwise direction respectively.
+In case of the left right anomaly and the right left anomaly the anomaly is converted to left left or right right.
+
+In case of avl trees there are many rotations while in case of the red black tree there are very less rotations and therefore the red black trees are used more than the avl trees.
+
+The pointers which red black tree obeys.
+1) Every node is either red or black.
+2) Root is always black.
+3) No two consecutive nodes are red.
+4) Number of black nodes from every node to all of the descendent leaves should be same.
+
+There is one property of the red black tree which we can encounter using this particular technique the height to the closest leaf can be at max half of the farthest leaf.
+
+Application of the binary search tree are as follows.
+1) To maintain sorted stream of data.
+2) Doubly ended priority queue.
+3) To solve the problem.
+
+Set in C++ are used to store the data in sorted order the underlying data structure for the set is red black tree.
+
+The syntax for creating the set data structure is as fllows.
+set<int> s;
+The other way for its creation is set<int,greater<int>> s;
+The set which is provided to us also has the iterators in place as well. we have the begin and the end iterator for those.
