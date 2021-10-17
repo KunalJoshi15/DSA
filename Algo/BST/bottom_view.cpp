@@ -13,7 +13,8 @@ public:
 		left = right = NULL;
 	}
 };
-
+// in case of a bottom view traversal we will be using a map and the a queue in the queue we will be having the node itself and
+// If in case the vertical we have found a newer node then we will be simply overriding the value which is currently present.
 void bottomView(Node *root){
 	map<int,int> mp;
 	queue<pair<Node*,int>> q;

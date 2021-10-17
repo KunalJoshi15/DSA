@@ -277,3 +277,16 @@ The syntax for creating the set data structure is as fllows.
 set<int> s;
 The other way for its creation is set<int,greater<int>> s;
 The set which is provided to us also has the iterators in place as well. we have the begin and the end iterator for those.
+
+While the creation of the heap data structure there are two types of heap. 
+1) Min Heap -> In case of min heap the parent node is always smaller than its children
+2) Max Heap -> In case of max heap the parent node is always greater than its children
+
+Heaps are always complete binary trees(Means that the filling of the trees is always from left to right.)
+
+There are many advantages of heap data structure
+
+here we need to find the maximum number of items that we can take such that the sum is also positive.
+This can be done in two ways one solution is using the sorting approach in which we sort the entire array and then we take the initial items until the sum is a +ve number
+
+The other approach that we follow is more efficient approach in that we create a heap.

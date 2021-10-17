@@ -16,6 +16,8 @@ int getMaxRect(int arr[],int n){
 		for(int j=i-1;i>=0;i--){
 			if(arr[j]>=arr[i]){
 				curr += arr[i];
+				// here all the bars which have a greater value are always included.
+				// we will be adding the value of the current element as per our requirement.
 			}
 			else{
 				// WHen we get the smaller bar then we can simply ignore that particular bar.
@@ -43,6 +45,8 @@ int getMaxRect(int arr[],int n){
 int getMaxArea(int arr[],int n){
     int res=0;
     int ps[n],ns[n];
+    // here we will be creating two arrays which will be having a previous element and the next element.
+
     
     stack <int> s;
     // here we need to index of the values which are present. not the exact values.
@@ -91,6 +95,7 @@ int getMaxRectArea(int arr[],int n){
 	for(int i=0;i<n;i++){
 		// considering the current element as the smallest element.
 		// THis loop is used to find the previous smaller element.
+		// the concept basically leverages the idea that the current element which is present is the smallest element.
 		// THe item in the stack which is below the current top is the previous smaller element only.
 		while(s.empty()==false an arr[s.top()]>=arr[i]){
 			int tp = s.pop();
