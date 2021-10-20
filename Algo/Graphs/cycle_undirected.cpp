@@ -40,6 +40,35 @@ public:
 		vector<bool> visited(V,false);
 		return dfs(0,visited,-1);
 	}
+	// there is one more for loop which is to be used as in case if the graph is disconencted then we need to consider even more nodes as per our requirement.
+	// 1 -- 2 -- 3
+// this particular approach leverages the idea of the bfs in order to detect whether the cycle exists or not.
+	bool cycleExists(){
+		vector<bool> visited(V,false);
+		queue<int> q;
+		q.push(0);
+		visited[V]=true;
+		vector<int> parent(V,-1);
+
+		while(q.empty()==false){
+			int curr = q.front();
+			q.pop();
+
+			for(int nbrs:l[curr]){
+				if(!visited[nbrs]){
+					visited[nbrs]=true;
+					q.push(nbrs);
+					parent[nbrs] = curr;
+				}
+				else{
+					if(parent[nbrs]!=curr){
+						return true;
+					}
+				}
+			}
+		}
+		return false;
+	}
 };
 
 
@@ -55,6 +84,13 @@ int main()
 		// g.addEdge(0,4);
 		// g.addEdge(3,4);
 		if(g.contains_cycle()){
+			cout<<"CYCLE";
+		}
+		else{
+			cout<<"NO CYCLE";
+		}
+
+		if(g.cycleExists()){
 			cout<<"CYCLE";
 		}
 		else{
