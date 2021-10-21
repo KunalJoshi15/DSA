@@ -13,6 +13,7 @@ bool canPlace(vector<int> b1,vector<int> b2){
 }
 
 int boxStacking(vector<vector<int>> boxes){
+	// in case of the box stacking problem we sort the boxes on the basis of height then we check whether we can place the current block in top of the box already placed.
 	sort(boxes.begin(),boxes.end(),compareBox);
 	int n = boxes.size();
 
@@ -25,6 +26,7 @@ int boxStacking(vector<vector<int>> boxes){
 
 	for(int i=1;i<n;i++){
 		for(int j=0;j<i;j++){
+			// check whether we can place the box[j] above the box i.
 			if(canPlace(boxes[j],boxes[i])){
 				int current_height = boxes[i][2];
 				if(dp[j]+current_height>dp[i]){
