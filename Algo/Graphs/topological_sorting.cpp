@@ -22,6 +22,9 @@ public:
 	// here we need to store the indegree of all the vertices which are present as per our requirement.
 
 	void topologicalSort(){
+		// find the indegree for all the vertices which are present in the graph the one with the 0 indegree will be the one which are printed first.
+		// after this the other nodes will be printed as per our requirement.
+
 		vector<int> in_degree(V,0);
 		// here the time complexity of finding this is O(V+E)
 		for(int u = 0;u<V;u++){
@@ -29,6 +32,7 @@ public:
 				in_degree[x]++;
 			}
 		}
+		// insert all the vertices which have the indegree as 0 inside the queue and then we will be performing the simple bfs.
 		queue<int> q;
 		for(int i=0;i<V;i++){
 			if(in_degree[i]==0)
