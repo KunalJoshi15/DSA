@@ -86,7 +86,15 @@ int main()
 	g.addEdge(4, 5, 4); 
 	g.addEdge(2, 3, 6); 
 	g.addEdge(5, 3, 1);
+/*
+	0->1->4
+	1->2
+	2->3
+	4->2->5
+	5->3
 
+	0 
+*/
 	int s = 0; 
 	cout << "Following are shortest distances from source " << s <<" \n"; 
 	g.shortestPath(s); 

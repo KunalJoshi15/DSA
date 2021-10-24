@@ -290,3 +290,5 @@ here we need to find the maximum number of items that we can take such that the 
 This can be done in two ways one solution is using the sorting approach in which we sort the entire array and then we take the initial items until the sum is a +ve number
 
 The other approach that we follow is more efficient approach in that we create a heap.
+
+In case of the kosaraju algorithm we need to find the strongly connected components that are possible in a particular graph.
