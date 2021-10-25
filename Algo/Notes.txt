@@ -292,3 +292,9 @@ This can be done in two ways one solution is using the sorting approach in which
 The other approach that we follow is more efficient approach in that we create a heap.
 
 In case of the kosaraju algorithm we need to find the strongly connected components that are possible in a particular graph.
+
+A particular set of vertices can be considered as strongly connected if each vertex in that set we can visit other vertex.
+
+In case of the undirected graph the conencted components are very easy to find.
+
+Each of the case we will be starting the traversal from sink vertex.
