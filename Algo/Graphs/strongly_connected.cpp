@@ -1,56 +1,106 @@
-#include<bits/stdc++.h>
+#include <iostream> 
+#include <list> 
+#include <stack> 
+using namespace std; 
 
-using namespace std;
+class Graph 
+{ 
+	// here we have defined the entire graph with the number of vertices which are present in it.
+	int V; 
+	list<int> *adj; 
+	// these all represents the function definition.
+	void fillOrder(int v, bool visited[], stack<int> &s); 
+ 
+	void DFSUtil(int v, bool visited[]); 
+public: 
+	Graph(int V); 
+	void addEdge(int v, int w); 
+	 
+	void printSCCs(); 
 
-class Graph{
-	int V;
-	list<int> *adj;
+	Graph getTranspose(); 
+}; 
 
-	void fillOrder(int v,bool visited[],stack<int> &s);
+Graph::Graph(int V) 
+{ 
+	this->V = V; 
+	adj = new list<int>[V]; 
+} 
+// DFS function calling is being performed.
+void Graph::DFSUtil(int v, bool visited[]) 
+{ 
+	visited[v] = true; 
+	cout << v << " "; 
 
-	void DFSUtil(int v,bool visited[]);
+	list<int>::iterator i; 
+	for (i = adj[v].begin(); i != adj[v].end(); ++i) 
+		if (!visited[*i]) 
+			DFSUtil(*i, visited); 
+} 
+// this will be used to get the transpose of the current graph.
+Graph Graph::getTranspose() 
+{ 
+	Graph g(V); 
+	for (int v = 0; v < V; v++) 
+	{ 
+		list<int>::iterator i; 
+		for(i = adj[v].begin(); i != adj[v].end(); ++i) 
+		{ 
+			g.adj[*i].push_back(v); 
+		} 
+	} 
+	return g; 
+} 
 
-public:
-	Graph(int V);
+void Graph::addEdge(int v, int w) 
+{ 
+	adj[v].push_back(w); 
+} 
 
-	void addEdge(int v,int w);
+void Graph::fillOrder(int v, bool visited[], stack<int> &s) 
+{ 
+	visited[v] = true; 
 
-	Graph getTranspose();
-};
+	list<int>::iterator i; 
+	for(i = adj[v].begin(); i != adj[v].end(); ++i) 
+		if(!visited[*i]) 
+			fillOrder(*i, visited, s); 
+ 
+	s.push(v); 
+} 
 
+void Graph::printSCCs() 
+{ 
+	stack<int> s; 
+ 
+	bool *visited = new bool[V]; 
+	for(int i = 0; i < V; i++) 
+		visited[i] = false; 
+ 
+	for(int i = 0; i < V; i++) 
+		if(visited[i] == false) 
+			fillOrder(i, visited, s); 
 
-Graph::Graph(int V){
-	this->V = V;
-	adj = new list<int>[V];
-}
+	Graph gr = getTranspose(); 
 
-void Graph::fillOrder(int v,bool visited[],stack<int> &s){
-	visited[v] = true;
+	for(int i = 0; i < V; i++) 
+		visited[i] = false; 
 
-	list<int>::iterator i;
-	for(i = adj[v].begin();i!=adj[v].end();++i){
-		if(!visited[*i]){
-			fillOrder(*i,visited,s);
-		}
-	}
-	s.push(v);
-}
+	while (s.empty() == false) 
+	{ 
+		int v = s.top(); 
+		s.pop(); 
+ 
+		if (visited[v] == false) 
+		{ 
+			gr.DFSUtil(v, visited); 
+			cout << endl; 
+		} 
+	} 
+} 
 
-void Graph::printSCC(){
-	stack<int> s;
-
-	bool visited[] = new int[V];
-	for(int i=0;i<V;i++){
-		if(visited[i]==false){
-			fillorder(i,visited,s);
-		}
-	}
-
-	Graph gr = getTranspose();
-}
-
-int main()
-{
+int main() 
+{ 
 	Graph g(5); 
 	g.addEdge(1, 0); 
 	g.addEdge(0, 2); 
@@ -62,4 +112,4 @@ int main()
 	g.printSCCs(); 
 
 	return 0; 
-}
+} 
