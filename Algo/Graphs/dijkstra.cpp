@@ -23,16 +23,22 @@ public:
 		dist[src]=0;
 
 		vector<bool> fin(V,false);
+		// here in this priority queue we will be sorting the vertices on the bases of weights.
+		// in the priority queue if there are multiple values then on basis of the first value the tree is created.
 		priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>> pq;
+		// here 0 represents the distance of src from src. Other distance at starting are considered as INFINITE.
 		pq.push({0,src});
-
+		// here we will be writing the distance of the vertices as per our requirement.
 		while(pq.empty()==false){
 			auto x = pq.top();
 			pq.pop();
+			// here to respresnts the current vertex.
 			int to = x.second;
 			int weight = x.first;
 
 			for(pair<int,int> nbrs:l[to]){
+				// here we have relaxed all the nodes as per our requirement.
+				// in the list that we have created the first parameter represents the node itself and the second respresnt the weight required to reach that particular vertex.
 				int x = nbrs.first;
 				int w = nbrs.second;
 
