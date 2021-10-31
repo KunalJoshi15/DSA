@@ -295,6 +295,8 @@ In case of the kosaraju algorithm we need to find the strongly connected compone
 
 A particular set of vertices can be considered as strongly connected if each vertex in that set we can visit other vertex.
 
+Articulation Point in a graph is said to be the vertex whose removal will make the particular graph disconnected.
+
 In case of the undirected graph the conencted components are very easy to find.
 
 Each of the case we will be starting the traversal from sink vertex.
