@@ -300,3 +300,8 @@ Articulation Point in a graph is said to be the vertex whose removal will make t
 In case of the undirected graph the conencted components are very easy to find.
 
 Each of the case we will be starting the traversal from sink vertex.
+
+we can easily find the articulation points using the approach that if a node in dfs tree is non root and if its any children has a back edge then we can say so it works.
+leaf is never an articulation point.
+
+low time is the lowest discovery time which is reachable from current node is.
