@@ -77,7 +77,9 @@ void Graph::AP()
 		if (ap[i] == true) 
 			cout << i << " "; 
 }
-
+/*
+A particular node can be an articulation point only if it follows these conditions.
+*/
 int main() 
 {  
 	// here we have created an undirected graph as per our requirement.
