@@ -40,9 +40,9 @@ public:
 			APUtil(v,visited,disc,low,parent,ap);
 			
 			low[u] = min(low[u],low[v]);
-			if(parent[u]==NIL and children>1)
+			if(parent[u]==-1 and children>1)
 				ap[u]=true;
-			if(parent[u]!=NIL and low[v] >= disc[u])
+			if(parent[u]!=-1 and low[v] >= disc[u])
 				ap[u] = true;
 			}
 			else if(v!=parent[u]){
