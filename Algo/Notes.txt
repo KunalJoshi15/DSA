@@ -305,3 +305,5 @@ we can easily find the articulation points using the approach that if a node in 
 leaf is never an articulation point.
 
 low time is the lowest discovery time which is reachable from current node is.
+
+All the types of questions which are optimization based can be solved using the greedy approach. we need to find the min number of coins we will be using sorting as our basic approach.
