@@ -8,7 +8,7 @@ public:
 	list<int> *adj;
 
 	void SCCUtil(int u,int disc[],int low[],stack<int> *st,bool stackMember[]);
-
+	
 	Graph(int V);
 	void addEdge(int v,int w);
 	void SCC();
