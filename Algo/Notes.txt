@@ -307,3 +307,17 @@ leaf is never an articulation point.
 low time is the lowest discovery time which is reachable from current node is.
 
 All the types of questions which are optimization based can be solved using the greedy approach. we need to find the min number of coins we will be using sorting as our basic approach.
+
+The main thing is that we want to maximize the profit that is present.
+every job takes 1 unit of time.
+THe job with the most profit is kept farthest.
+
+Huffman coding is a popular apprach of encoding and decoding data in lossless way. Lossless means if that we have encoded the data then we will be able to decompress data without losing it.
+In the file itself there can be as many characters as possible.
+
+huffman coding is the variable length coding different characters will be having different lengths and while sending those that can be checked.
+
+We basically follow the greedy approach in which the character with most occurence takes least number of bit. For each and every character we will associate a freq and then we will be using heap.
+Huffman algorithm creates a prefix free code which means that similar prefix can be used to represent different characters.
+
+every left node is represent as 0 and right as 1. binary tree created is a full binary tree.
