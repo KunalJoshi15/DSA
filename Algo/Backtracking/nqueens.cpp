@@ -67,3 +67,4 @@ int main()
 	solve();
 	return 0;
 }
+// there is one more type which can be asked in that we can be asked to find the number of solutions which are possible for a particular square board.

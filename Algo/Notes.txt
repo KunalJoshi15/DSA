@@ -321,3 +321,7 @@ We basically follow the greedy approach in which the character with most occuren
 Huffman algorithm creates a prefix free code which means that similar prefix can be used to represent different characters.
 
 every left node is represent as 0 and right as 1. binary tree created is a full binary tree.
+Dynamic Programming is basically some modification on plain recursion. This optimization makes the time complexity very less.
+All the problems can be solved using dynamic programming but cannot say whether that can be done in polynomial time.
+
+There are many repetition which should not be computed over and over again therefore it is saved.
