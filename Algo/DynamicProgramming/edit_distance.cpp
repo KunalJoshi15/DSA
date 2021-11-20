@@ -16,6 +16,26 @@ int EDNaive(string s1,string s2,int m,int n){
 	// all the three operations will be tried
 	// min of three recursive calls is taken.
 }
+
+int EDTopDown(string s1,string s2,int m,int n,vector<vector<int>> &dp){
+	if(m==0){
+		return dp[m][n] = n; 
+	}
+	if(n==0){
+		return dp[m][n] = m;
+	}
+	if(dp[m-1][n-1]!=-1){
+		return dp[m-1][n-1];
+	}
+
+	if(s1[m-1]==s2[n-1]){
+		return dp[m-1][n-1] = EDTopDown(s1,s2,m-1,n-1,dp);
+	}
+	else{
+		return dp[m-1][n-1]=1+min(EDTopDown(s1,s2,m-1,n,dp),min(EDTopDown(s1,s2,m,n-1,dp),EDTopDown(s1,s2,m-1,n-1,dp)));
+	}
+}
+
 int EDBottomUp(string s1,string s2,int m,int n){
 	int dp[m+1][n+1];
 
@@ -40,10 +60,22 @@ int EDBottomUp(string s1,string s2,int m,int n){
 	}
 	return dp[m][n];
 }
+
 int main()
 {
-	string s1 = "CAT";
-	string s2 = "CUT";
-	cout<<EDNaive(s1,s2,3,3)<<endl;
-	cout<<EDBottomUp(s1,s2,3,3);
+	string s1 = "SUNDAY";
+	string s2 = "SATURDAY";
+	int m = s1.size();
+	int n = s2.size();
+	vector<vector<int>> dp(m,vector<int>(n,-1));
+	cout<<EDNaive(s1,s2,m,n)<<endl;
+	cout<<EDBottomUp(s1,s2,m,n)<<endl;
+	cout<<EDTopDown(s1,s2,m,n,dp)<<endl;
+
+	/*for(int i=0;i<m;i++){
+		for(int j=0;j<n;j++){
+			cout<<dp[i][j]<<" ";
+		}
+		cout<<endl;
+	}*/
 }
