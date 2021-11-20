@@ -325,3 +325,7 @@ Dynamic Programming is basically some modification on plain recursion. This opti
 All the problems can be solved using dynamic programming but cannot say whether that can be done in polynomial time.
 
 There are many repetition which should not be computed over and over again therefore it is saved.
+
+This particular approach is used a lot in case of the programming languages in case of implementing the diff utility this is usually used for finding the difference in the code before and now is found using this particular utility.
+
+What ever is extra is first is removed and the part extra in second has been added to the file.

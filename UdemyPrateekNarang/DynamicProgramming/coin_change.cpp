@@ -26,6 +26,7 @@ int topDown1(int m,vector<int> &denoms,vector<int> &dp){
 	int ans = INT_MAX;
 	for(int c:denoms){
 		if(c>m){
+			// current denomination is larget then simple exclude it.
 			continue;
 		}
 		ans = min(ans,topDown1(m-c,denoms,dp));
