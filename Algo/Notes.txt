@@ -329,3 +329,12 @@ There are many repetition which should not be computed over and over again there
 This particular approach is used a lot in case of the programming languages in case of implementing the diff utility this is usually used for finding the difference in the code before and now is found using this particular utility.
 
 What ever is extra is first is removed and the part extra in second has been added to the file.
+
+Edit distance problem is used for the creation of dictionary as per our requriement.
+
+There are different variations of the lis problem which are used a lot. Like how many items we need to delete in order to make it sorted.
+
+There are many different variations of the Longest increasing subsequence which are used a lot.
+
+In case of the longest increasing subsequence we have the subsequence using the increasing term.
+Min deletions to make an array sorted can be done using the concept of longest increasing subsequence.
