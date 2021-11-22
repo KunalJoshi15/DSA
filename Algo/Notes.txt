@@ -338,3 +338,5 @@ There are many different variations of the Longest increasing subsequence which 
 
 In case of the longest increasing subsequence we have the subsequence using the increasing term.
 Min deletions to make an array sorted can be done using the concept of longest increasing subsequence.
+
+one more version to this lis problem is that we are provided with a pair in which a>b (a,b) (c,d) we need to find the c,d in such a way that a<b<c<d
