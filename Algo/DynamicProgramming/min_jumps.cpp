@@ -17,8 +17,24 @@ int minJumps(int *arr,int n){
 	return res;
 }
 
+int minJumpsBU(int *arr,int n){
+	int dp[n];
+	for(int i=1;i<n;i++){
+		dp[i] = INT_MAX;
+	}
+	dp[0]=0;
+	for(int i=0;i<n;i++){
+		for(int j=1;j<=arr[i];j++){
+			if(i+j<n){
+				dp[i+j] = min(dp[i+j],dp[i]+1);
+			}
+		}
+	}
+	return dp[n-1];
+}
+
 int main()
 {
 	int arr[] = {3, 4, 2, 1, 2, 1}, n =6;
-	cout<<minJumps(arr, n);
+	cout<<minJumpsBU(arr, n);
 }
