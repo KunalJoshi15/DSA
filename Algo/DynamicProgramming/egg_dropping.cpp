@@ -53,6 +53,35 @@ int eggDroppingBU(int n,int k){
 	}
 	return dp[k][n];
 }
+// there is a mathematical way of approaching this particular problem.
+int f(int x,int k,int n){
+	int ans = 0;
+	int r = 1;
+	for(int i=1;i<=k;i++){
+		r * = x-i+1;
+		r /= i;
+		ans += r;
+		if(ans>=n) break;
+	}
+	return ans;
+}
+
+int superEggDrop(int k,int n){
+	// here k represents the eggs and n is floors.
+	int lo = 1;
+	int hi = n;
+
+	while(lo<hi){
+		int mi = (lo+hi)/2;
+		if(f(mi,k,n)<n){
+			lo = mi+1;
+		}
+		else{
+			hi = mi;
+		}
+	}
+	return lo;
+}
 
 int main()
 {
