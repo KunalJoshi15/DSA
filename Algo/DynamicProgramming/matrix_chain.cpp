@@ -2,6 +2,7 @@
 
 using namespace std;
 // this particular array which we have created consists the dimensions as per our requirement.
+// here we have basically created the chain me have started it with i.
 int mChain(int *arr,int i,int j){
 	if(i==j) return 0;// single element.
 
