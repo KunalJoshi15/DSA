@@ -22,15 +22,20 @@ int eggDrop(int n,int k){
 	return min+1;
 }
 int eggDroppingBU(int n,int k){
+	// here we have defined a 2D array in order to store the overlapping sub problems.
+	// here n defines the number of eggs while k defines the number of floors.
 	int dp[k+1][n+1];
 
 	for(int i=1;i<=n;i++){
 		// iterate through all the eggs.
+		// if there is only 1 floor then there can be as many eggs as we want answer can be found in 1 attempt.
 		dp[1][i] = 1;
+		// if there are no floors then we cannot find the answer.
 		dp[0][i] = 0;
 	}
 
 	for(int i=1;i<=k;i++){
+		// if there is only one egg then on the worst case we will have to throw it from all the floors. until it breaks(From down to up).
 		dp[i][1] = i;
 	}
 
@@ -39,6 +44,9 @@ int eggDroppingBU(int n,int k){
 			dp[i][j]=INT_MAX;
 
 			for(int x=1;x<=i;x++){
+				// we can consider x as the current floor from where we are dropping the egg.
+				// we have broken one egg j-1 therefore and x-1 because that floor we can ignore.
+				// max is checked over here because we need to consider the worst case for breaking of eggs.
 				dp[i][j] = min(dp[i][j],1+max(dp[x-1][j-1],dp[i-x][j]));
 			}
 		}
