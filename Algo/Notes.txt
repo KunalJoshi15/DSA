@@ -340,3 +340,5 @@ In case of the longest increasing subsequence we have the subsequence using the 
 Min deletions to make an array sorted can be done using the concept of longest increasing subsequence.
 
 one more version to this lis problem is that we are provided with a pair in which a>b (a,b) (c,d) we need to find the c,d in such a way that a<b<c<d
+
+In the matrix chain multiplication we are thinking of finding the integer multiplication which are required in order to multiply two matrices we will be choosing the one which will take least time.
