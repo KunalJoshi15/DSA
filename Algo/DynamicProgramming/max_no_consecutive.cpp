@@ -21,6 +21,21 @@ int maxConsBU(int *arr,int n){
 	}
 	return dp[n];
 }
+int maxSumTD(int *arr,int n){
+	// we dont even require the extra array which is present.
+	if(n==0) return arr[0];
+
+	int prev_prev = arr[0];
+	int prev = max(arr[0],arr[1]);
+	int res = prev;
+
+	for(int i=3;i<=n;i++){
+		res = max(prev,prev_prev+arr[i-1]);
+		prev_prev = prev;
+		prev = res;
+	}
+	return res;
+}
 
 int main()
 {
