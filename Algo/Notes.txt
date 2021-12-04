@@ -359,3 +359,6 @@ return res;
 
 There are many overlapping subproblems therefore we can use dynamic programming in this particular case.
 we will be filling the arrays diagonal by diagonal
+
+Tries are basically used as the dictionaries as per our requirement. (These are basically used for the efficient way for searching a particular value as per our requirement.)
+search of the strings in trie is a lot easier.
