@@ -342,3 +342,20 @@ Min deletions to make an array sorted can be done using the concept of longest i
 one more version to this lis problem is that we are provided with a pair in which a>b (a,b) (c,d) we need to find the c,d in such a way that a<b<c<d
 
 In the matrix chain multiplication we are thinking of finding the integer multiplication which are required in order to multiply two matrices we will be choosing the one which will take least time.
+
+In case of the naive approach for the palindromic partitioning
+In the base case we write if the string is palindrome then we will be simply returning the value as it is. (All possible places we need to find the partitions.) We add 1 to the result.
+
+if(isPalindrome(s,i,j)){
+if the particular string is already palindrome then we actually don't have to do anything.
+    return 0;
+}
+int res  = INT_MAX; here we already know that the result is not palindrome.
+
+for(int k=i;k<j;k++){
+    res = min(res,1+pal(s,i,k)+pal(s,k+1,j));
+}
+return res;
+
+There are many overlapping subproblems therefore we can use dynamic programming in this particular case.
+we will be filling the arrays diagonal by diagonal

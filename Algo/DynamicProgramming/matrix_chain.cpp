@@ -30,12 +30,31 @@ int mChainBU(int *arr,int n){
 	}
 	return dp[0][n-1];
 }
+// other BU way
+int mChainBU1(int *arr,int n){
+	int dp[n][n];
+	for(int i=0;i<n;i++){
+		dp[i][i] = 0;
+	}
+	for(int gap=2;gap<n;gap++){
+		for(int i=1;i<n-gap+1;i++){
+			int j = i+gap-1;
+			dp[i][j] = INT_MAX;
+
+			for(int k=i;k<=j-1;k++){
+				dp[i][j] = min(dp[i][j],dp[i][k]+dp[k+1][j]+arr[i-1]*arr[k]*arr[j]);
+			}
+		}
+	}
+	return dp[1][n-1];
+}
 
 int main() {
     
-    	int n = 4, arr[]= {2, 1, 3, 4};
+    	int n = 4, arr[]= {45, 24, 32, 40};
     	
     	cout<<mChain(arr, 1,n-1)<<endl;
     	cout<<mChainBU(arr,n)<<endl;
+    	cout<<mChainBU1(arr,n)<<endl;
     	return 0;
 }

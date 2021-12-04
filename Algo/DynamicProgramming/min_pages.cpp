@@ -35,6 +35,8 @@ int minPagesBU(int *arr,int n,int k){
 		for(int j=2;j<=n;j++){
 			int res = INT_MAX;
 			for(int p=1;p<j;p++){
+				// here we will check the max answer which is currently possible.
+				// after finding the current answer we will give other books to the remaining students.
 				res = min(res,max(dp[i-1][p],sum(arr,p,j-1)));
 			}
 			dp[i][j] = res;
