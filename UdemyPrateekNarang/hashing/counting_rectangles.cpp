@@ -41,6 +41,7 @@ int count_rectangles(vector<Point> &points){
 				continue;
 			}
 			//P3,P4
+			// here we have created the coordinates as per our own requirement.
 			Point p3(p1.x,p2.y);
 			Point p4(p2.x,p1.y);
 			// This basically represents the coordinates that we have.

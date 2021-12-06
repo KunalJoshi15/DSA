@@ -30,6 +30,10 @@ bool equalSubsets(int *arr,int n,int sum){
 int equalSubsetsTD(int *arr,int n,int sum,int **dp){
 	if(sum==0) return 1;
 	if(n<=0) return 0;
+
+	if(dp[n-1][sum]==-1){
+		
+	}
 }
 
 int main()

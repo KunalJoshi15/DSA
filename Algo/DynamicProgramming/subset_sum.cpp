@@ -11,7 +11,7 @@ int countSubsetsBU(int *arr,int n,int sum){
 	// create a 2D array for finding the solutions as per our requirement.
 	int dp[n+1][sum+1];
 
-	for(int i=0;i<n;i++){
+	for(int i=0;i<=n;i++){
 		// this means that if the value of sum is 0 then there is always a subset with that sum.
 		dp[i][0] = 1;
 	}
@@ -39,8 +39,8 @@ int countSubsetsBU(int *arr,int n,int sum){
 
 int main()
 {
-	int n =3;
-	int arr[] = {10,20,15};
-	int sum = 25;
+	int arr[] = {1,1,1,1,1};
+	int n = sizeof(arr)/sizeof(int);
+	int sum = 4;
 	cout<<countSubsets(arr,n,sum);
 }
