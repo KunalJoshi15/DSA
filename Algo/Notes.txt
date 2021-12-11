@@ -362,3 +362,5 @@ we will be filling the arrays diagonal by diagonal
 
 Tries are basically used as the dictionaries as per our requirement. (These are basically used for the efficient way for searching a particular value as per our requirement.)
 search of the strings in trie is a lot easier.
+
+In case of the dynamic programming there are three types of problems. It is basically at which all locations we can perform cuts.
