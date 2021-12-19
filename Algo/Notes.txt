@@ -364,3 +364,69 @@ Tries are basically used as the dictionaries as per our requirement. (These are 
 search of the strings in trie is a lot easier.
 
 In case of the dynamic programming there are three types of problems. It is basically at which all locations we can perform cuts.
+
+The steps are simple.
+
+    Check if root is NULL. return if yes
+    // Visited hashmap is needed to prevent cycles. Example, consider a undirected rectangle shape graph from A->B->C->D->A. If we dont' keep visited, it will keep on going.
+    If no, clone the node and add the entry pair to hashmap as visited[node] = clonedNode;
+    Iterate over neighbours and do dfs for each. While we are looping over this neighbour list, we can also fill neighbours of cloned node with the result from recursive calls.
+    Return clonedNode at each recursive call
+
+DFS Solution
+
+class Solution {
+private:
+    unordered_map<Node*, Node*> visited;
+public:
+    Node* cloneGraph(Node* node) {
+        if(node == NULL)
+            return node;
+        if(visited[node])
+            return visited[node];
+        
+        Node* cloned = new Node(node->val);
+        visited[node] = cloned;
+        
+        for(auto nei: node->neighbors){
+            cloned->neighbors.push_back(cloneGraph(nei));
+        }
+        return cloned;
+        
+    }
+};
+
+Steps for BFS are almost same. Most of the things are relatable if you have studied trees level order traversal.
+
+So instead of the stack here, we use queue to process the nodes and their neighbours.
+variable curr serves as the present root. We iterate over its children in the same way.
+Inside the neigbour loop, if the neighbour is not visited, we do two things
+
+    Clone the neighbour and Put the entry of <neighbour, clonedNeighbour> into visited hashmap.
+    push the neighbour into queue. This is to process the children of the neighbours children in future iterations over queue.
+
+We fill the neigbours vector/list in the same way.
+BFS Solution
+
+Node* cloneGraph(Node* node){
+        if(node == NULL)
+            return node;
+        unordered_map<Node*, Node*> visited;
+        queue<Node*> Q;
+        Q.push(node);
+        visited[node] = new Node(node->val);
+        while(!Q.empty()){
+            int n = Q.size();
+            Node* curr = Q.front();
+            Q.pop();
+            for(auto nei: curr->neighbors){
+                if(!visited[nei]){
+                     visited[nei] = new Node(nei->val);
+                     Q.push(nei);
+                }
+                visited[curr]->neighbors.push_back(visited[nei]);
+            }
+        }
+        return visited[node];
+
+    }
