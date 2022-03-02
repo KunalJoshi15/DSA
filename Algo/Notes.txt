@@ -430,3 +430,6 @@ Node* cloneGraph(Node* node){
         return visited[node];
 
     }
+
+we want to rearrange the characters in such a way that no two characters are adjacent.
+if we want to find median of a particular stream which is provided to us then we will have to consider two seperate heaps one is the min heap and the other one is the max heap.
