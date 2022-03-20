@@ -7,7 +7,7 @@ int change(int amount,vector<int> &coins){
 	cin.tie(NULL);
 	cout.tie(NULL);
 	int p = coins.size();
-	vector<vector<int>> dp(n+1,vector<int>(amount+1));
+	vector<vector<int>> dp(p+1,vector<int>(amount+1));
 
 	int i,j;
 

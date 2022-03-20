@@ -33,6 +33,30 @@ int minJumpsBU(int *arr,int n){
 	return dp[n-1];
 }
 
+int minJumpsOpt(int *arr,int n){
+	if(n<=1){
+		return 0;
+	}
+	if(arr[0]==0){
+		return -1;
+	}
+
+	int maxReach = arr[0];
+	int step = arr[0];
+	int jump = 1;
+	int i=1;
+	for(int i=1;i<n;i++){
+		if(i==n-1) return jump;
+		maxReach = max(maxReach,i+arr[i]);
+		step--;
+		if(step==0){
+			jump++;
+			if(i>=maxReach)
+				return -1;
+		}
+	}
+}
+
 int main()
 {
 	int arr[] = {3, 4, 2, 1, 2, 1}, n =6;
